@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kanban-board
+  namespace: moumita-surobita-assignment
+  labels:
+    app: kanban-board
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kanban-board
+  template:
+    metadata:
+      labels:
+        app: kanban-board
+    spec:
+      containers:
+        - name: kanban-board
+          image: moumitatw/kanban_board
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: VERSION
+              value: "1.0"
