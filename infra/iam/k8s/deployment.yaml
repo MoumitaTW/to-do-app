@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kanban-board
-  namespace: moumita-surobita-assignment
+  namespace: infracubator-demo
   labels:
     app: kanban-board
 spec:
