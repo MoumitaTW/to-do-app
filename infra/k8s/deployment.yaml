@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kanban-board
-  namespace: infracubator-demo
   labels:
     app: kanban-board
 spec:
